@@ -13,8 +13,9 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
-      }
+      },
     },
   },
   plugins: [],
 }
+
