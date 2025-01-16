@@ -26,7 +26,7 @@ const EditPrompt = () => {
     if (promptId) getPromptDeteils();
   }, [promptId]);
 
-  const updayePrompt = async (e) => {
+  const updatePrompt = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -51,13 +51,17 @@ const EditPrompt = () => {
     }
   };
 
+  if (!promptId) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Form
       type="Edit"
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={updayePrompt}
+      handleSubmit={updatePrompt}
     />
   );
 };
